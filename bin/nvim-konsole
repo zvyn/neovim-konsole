@@ -1,11 +1,7 @@
 #!/usr/bin/env sh
 
-thisFile=$(readlink -f $0);
-appDir="$(dirname $thisFile)/..";
-
 # Disable Ctrl-S
 stty stop '' -ixoff
 
 unset VTE_VERSION;
-konsole --nofork --dograb --hide-tabbar --hide-menubar --profile nvim -e /usr/bin/nvim "$@" &
-# konsole --profile nvim
+konsole --nofork --dograb --hide-tabbar --hide-menubar --profile nvim -e /usr/bin/nvim "$@"
